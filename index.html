@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Para Minha Gata</title>
+</head>
+
+<body>
+
+    <div id="conteudo">
+        <h2>Patricia, Aceita Namorar Comigo? ♥️</h2>
+        <div style="margin: auto;width:170px;">
+            <button style="position: fixed;display:block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute">NÃO</button>
+        </div>
+    </div>    
+</body>
+<style>
+    #conteudo {
+        background: #e66d6d;
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left:0;
+        padding:10px;
+        text-align:center;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .btn {
+        background:black;
+        color:white;
+        border:none;
+        padding:10px;
+        width:80px;
+        border-radius:5px;
+    }
+</style>
+
+<script>
+    function desvia(btn){
+        btn.style.position='absolute';
+        btn.style.bottom=geraPosicao(10,90);
+        btn.style.left=gerarPosicao(10,90);
+        console.log('opa,desviei...');
+}
+
+function geraPosicao(min,max){
+    return (Math.random()*(max-min)+ min)+ "%";
+}
+
+function sim(){
+    alert("Você agora é a minha namorada!! Te Amo Minha Princesa :)");
+    location.href="https://www.youtube.com/watch?v=mWoVrXmo97g&pp=ygUSYmVzdCBwYXJ0IHRyYWR1Y2Fv"
+}
+</script>
+</html>
